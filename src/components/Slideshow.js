@@ -9,8 +9,8 @@ const fadeImages = [hero1, hero2, hero3];
 
 const Slideshow = () => {
   return (
-    <div className="slide-container">
-      <Fade>
+    // <div className="slide-container">
+      <Fade arrows={false} duration={4000}>
         <div className="each-fade">
           <div>
             <img src={fadeImages[0]} alt="car" />
@@ -27,7 +27,7 @@ const Slideshow = () => {
           </div>
         </div>
       </Fade>
-    </div>
+    // </div>
   );
 };
 

@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "bulma";
 // COMPONENTS
+import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 // import About from "./components/About";
 // import Gallery from "./components/Gallery";
@@ -14,24 +15,23 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <nav className="navbar is-spaced is-fixed-top">
+        <nav className="navbar is-white is-spaced is-transparent">
           <div className="navbar-brand">
-            <Link className="navbar-item" to="/">
-              <img src={navLogo} alt="logo" height="100" />
+            <Link className="navbar-item navbar-brand-item" to="/">
+              <img src={navLogo} alt="logo" />
+              {/* OUTLAW718 */}
             </Link>
           </div>
-          {/* </div> */}
 
-          {/* <div className="navbar-menu"> */}
           <div className="navbar-end">
             <Link className="navbar-item" to="/About">
-              About
+              ABOUT
             </Link>
             <Link className="navbar-item" to="/Gallery">
-              Gallery
+              GALLERY
             </Link>
             <Link className="navbar-item" to="/contact">
-              Get in touch
+              GET IN TOUCH
             </Link>
           </div>
         </nav>
@@ -43,6 +43,7 @@ function App() {
           {/* <Route path="/contact" component={Contact} /> */}
         </Switch>
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }
