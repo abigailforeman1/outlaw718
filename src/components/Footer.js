@@ -1,17 +1,18 @@
 import React from "react";
+
 import navLogo from "../assets/Outlaw718-logo.png";
 
 const Footer = () => {
   return (
     <footer className="footer is-flex is-justify-content-space-between is-align-items-center">
-      <section className="content mt-0 mb-0 ml-0 mr-0">
+      <section className="content m-0">
         <img src={navLogo} alt="logo" style={{ maxHeight: "100px" }} />
       </section>
 
       <section className="content is-flex is-justify-content-flex-end footer-info">
         <div className="ml-3">
-          <p className="mt-1 mb-1 ml-1 mr-1">+447941 742002</p>
-          <p className="mt-1 mb-1 ml-1 mr-1">
+          <p className="m-1">+447941 742002</p>
+          <p className="m-1">
             <a
               href="mailto:outlaw718@btinternet.com"
               style={{ textDecoration: "underline" }}
@@ -23,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="ml-6">
           <p
-            className="mt-1 mb-1 ml-1 mr-1"
+            className="m-1"
             style={{ textDecoration: "underline" }}
           >
             <a
@@ -36,7 +37,7 @@ const Footer = () => {
             </a>
           </p>
           <p
-            className="mt-1 mb-1 ml-1 mr-1"
+            className="m-1"
             style={{ textDecoration: "underline" }}
           >
             <a

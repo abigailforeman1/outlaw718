@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
-// import Slideshow from "./Slideshow";
-// import logo from "../assets/Outlaw718-logo.png";
-// import hero1 from "../assets/hero1.2.png";
-// import hero2 from "../assets/hero2.png";
-// import hero3 from "../assets/hero3.png";
+import hero from "../assets/hero.jpg";
+import hero2 from "../assets/hero1.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.jpg";
+import bluecar from "../assets/image5.jpg";
 import car from "../assets/car.jpg";
 import car2 from "../assets/car2.jpg";
 import car3 from "../assets/car3.jpg";
 
 let heroImage = car;
-const fadeImages = [car, car2, car3];
+const fadeImages = [car, hero3, car2, car3];
 let startNum = 1;
 
 const Homepage = () => {
@@ -39,42 +40,72 @@ const Homepage = () => {
   return (
     <>
       <section className="hero is-white">
-        <div className="hero-body">
-          <div
-            className="container is-flex is-justify-content-center"
-            style={{
-              height: "100vh",
-            }}
-          >
-            <img
-              src={heroImage}
-              alt="logo"
-              className="fade-in"
+        <Fade>
+          <div className="hero-body">
+            <div
+              className="container is-flex is-justify-content-center"
               style={{
-                width: "100vw",
-                objectFit: "cover",
-                objectPosition: "center",
+                height: "90vh",
               }}
-            />
-          </div>
-        </div>
-        <section className="section is-large">
-          <div className="container is-max-widescreen">
-            <p className="subtitle is-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <Link
-              to="/contact"
-              className="subtitle is-4"
-              style={{ textDecoration: "underline" }}
             >
-              Get in touch
-            </Link>
+              <img
+                src={heroImage}
+                alt="logo"
+                className="fade-in"
+                style={{
+                  width: "90vw",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
+            </div>
           </div>
-        </section>
+        </Fade>
+        <Fade>
+          <section
+            className="section is-large"
+            style={{ backgroundColor: "slategrey" }}
+          >
+            <div className="container is-max-widescreen">
+              <p className="subtitle is-2" style={{ color: "white" }}>
+                Bespoke chassis design and fabrication. Classic car recreations
+                built to order. Some more information here about what you do
+                perhaps. Something punchy and to the point.
+              </p>
+              <Link
+                to="/contact"
+                className="subtitle is-4"
+                style={{ textDecoration: "underline", color: "white" }}
+              >
+                Get in touch
+              </Link>
+            </div>
+          </section>
+        </Fade>
+        <Fade>
+          <section
+            className="section is-medium"
+            // style={{ backgroundColor: "slategrey" }}
+          >
+            <div className="container is-max-widescreen">
+              <div className="tile is-ancestor">
+                <div class="tile m-2">
+                  <img src={hero4} alt="car" style={{ objectFit: "cover" }} />
+                </div>
+                <div class="tile m-2">
+                  <img src={bluecar} alt="car" style={{ objectFit: "cover" }} />
+                </div>
+                <div class="tile m-2">
+                  <img
+                    src={hero3}
+                    alt="car"
+                    style={{ objectFit: "cover", objectPosition: "left" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </Fade>
       </section>
     </>
   );

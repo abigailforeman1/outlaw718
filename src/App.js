@@ -1,13 +1,12 @@
-// EXTERNAL
 import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "bulma";
-// COMPONENTS
+
 import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 // import About from "./components/About";
 // import Gallery from "./components/Gallery";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 
 import navLogo from "./assets/Outlaw718-logo.png";
 
@@ -40,7 +39,7 @@ function App() {
           <Route exact path="/" component={Homepage} />
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/gallery" component={Gallery} /> */}
-          {/* <Route path="/contact" component={Contact} /> */}
+          <Route path="/contact" component={Contact} />
         </Switch>
       </main>
       <Footer />
