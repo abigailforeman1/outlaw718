@@ -20,8 +20,9 @@ body {
   font-weight: 700;
 }
 
-a.navbar-item:hover, a:hover {
-  color: rgb(170, 210, 255)!important;
+a.navbar-item:hover,
+a:hover {
+  color: rgb(170, 210, 255) !important;
 }
 
 .navbar-item img {
@@ -43,9 +44,21 @@ a.navbar-item:hover, a:hover {
     margin-bottom: 3rem;
   }
 }
-
-.hero-body {
-  // padding: 1.5rem !important;
+@media screen and (max-width: 700px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inquiries-info {
+    font-size: 1.3rem !important;
+  }
+  .inquiries-info-section {
+    width: 90% !important;
+  }
+  .inquiries-section {
+    text-align: center;
+    width: 90% !important;
+  }
 }
 
 .footer {
